@@ -23,7 +23,7 @@
     "span5 span"
     "mensagem mensagem" 75px
     "botao botao"
-    / minmax(auto, 400px);
+    / minmax(auto, 500px);
     width: 100%;
     margin-top: 20px;
     gap: 15px;
@@ -93,16 +93,16 @@ span {
     font: 300 14px 'Alexandria';
     border-radius: 7px;
     transition: all .3s;
-    
 }
 
 input:focus {
     border: 1px solid #1A2DF3;
+    
 }
 
 input::placeholder {
     color: #1A2DF3;
-    padding-left: 12px;
+    
 }
 
 input::placeholder:active {
@@ -119,20 +119,7 @@ input[type=submit] {
     border-radius: 100px;
     width: 150px;
     height: 50px;
-    margin-top: 8px;    
-}
-
-input[type=submit]:focus {
-    background-color: #f31a7f;
-    padding: 0;
-}
-
-.botão::placeholder {
-    color: blanchedalmond;
-}
-
-textarea:focus, input:focus {
-    padding-left: 12px;
+    margin-top: 10px;    
 }
 
 .nome::placeholder {
@@ -142,17 +129,42 @@ textarea:focus, input:focus {
 .botão {
     width: 150px;
     background-color: #1A2DF3;  
+    color: white;
+    padding: 0;
 }
 
-input, .botão::placeholder {
-    color: #fff;
+input[type=submit]:hover {
+    background-color: red;
+
+}
+
+input {
+    color: black;
     border-radius: 100px;
-}
-
-.inputs {
-    outline: none;
+    padding: 0 0 0 12px;
+   outline: none;
 }
 
 .inputs:focus {
     border-color: #1A2DF3;
+}
+
+@media screen and (max-width: 767px) {
+    
+    .form {
+        display: grid;
+        grid-template: 
+        "nome sobrenome" 50px
+        "span1 span2"
+        "email telefone" 50px
+        "span3 span4"
+        "endereço endereço" 50px
+        "span5 span"
+        "mensagem mensagem" 75px
+        "botao botao"
+        / minmax(auto, 130px);
+        width: 100%;
+        margin-top: 20px;
+        gap: 15px;
+    }
 }
